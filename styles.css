@@ -1,0 +1,28 @@
+html {
+  background-color: black;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  color: white;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+a, a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+small {
+  display: block;
+  font-size: 10px;
+  position: aboslute;
+  bottom: 0;
+  left: 0;
+}
