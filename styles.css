@@ -31,7 +31,8 @@ h1 {
 }
 
 a {
-  color: black;
+  color: white;
+  transition: color 0.2s ease;
   text-decoration: none;
 }
 
