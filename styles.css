@@ -61,11 +61,6 @@ small {
   color: #D9D9D6;
 }
 
-/* Sleet */
-.sl {
-  color: #B6CFD0;
-}
-
 /* Hail */
 .h {
   color: #FFB3AB;
@@ -74,11 +69,6 @@ small {
 /* Thunderstorm */
 .t {
   color: #DFA0C9;
-}
-
-/* Heavy rain */
-.hr {
-  color: #9595D2;
 }
 
 /* Light rain */
@@ -91,13 +81,8 @@ small {
   color: #5BC2E7;
 }
 
-/* Heavy clouds */
-.hc {
-  color: #BEC6C4;
-}
-
-/* Light clouds */
-.lc {
+/* Clouds */
+.cl {
   color: #BEC6C4;
 }
 

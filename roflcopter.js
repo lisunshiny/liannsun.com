@@ -1,17 +1,14 @@
 $(function() {
-  // Docs @ https://developer.yahoo.com/weather/documentation.html#codes
+  // Docs @ https://openweathermap.org/current
   var weatherCodeMap = [
-    [_.range(0, 9), "t"],
-    [_.range(9, 13), "lr"],
-    [_.range(13, 17), "sn"],
-    [_.range(17, 19), "h"],
-    [_.range(19, 29), "hc"],
-    [_.range(29, 31), "lc"],
-    [_.range(31, 37), "c"],
-    [_.range(37, 41), "hr"],
-    [_.range(41, 44), "sn"],
-    [_.range(44, 45), "c"],
-    [_.range(45, 48), "t"],
+    [_.range(200, 300), "t"],
+    [_.range(300, 400), "lr"],
+    [_.range(500, 600), "s"],
+    [_.range(600, 700), "sn"],
+    [_.range(800, 801), "c"],
+    [_.range(801, 900), "cl"],
+    [_.range(900, 906), "t"],
+    [_.range(906, 907), "h"]
   ];
 
   function getClassFromWeatherCode(code) {
@@ -36,10 +33,15 @@ $(function() {
   $.ajax({
     method: "GET",
     dataType: "json",
-    url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(2459115)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",
+    url: "//api.openweathermap.org/data/2.5/weather",
+    data: {
+      q: "new york",
+      units: "imperial",
+      appid: "e83b3c4c08285bf87b99f9bbc0abe3f0"
+    },
     success: function(data) {
-      var conditionCode = data.query.results.channel.item.condition.code,
-      conditionText = data.query.results.channel.item.condition.text.toLowerCase(),
+      var conditionCode = data.weather[0].id
+      conditionText = data.weather[0].description.toLowerCase(),
       smallCopy = "Fun fact: the color of the links changes depending on the current weather in NYC (" + conditionText + ").",
       cssClass = getClassFromWeatherCode(conditionCode),
       $info = $("<small>").text(smallCopy);
