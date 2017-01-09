@@ -45,6 +45,7 @@ $(function() {
       smallCopy = "Fun fact: the color of the links changes depending on the current weather in NYC (" + conditionText + ").",
       cssClass = getClassFromWeatherCode(conditionCode),
       $info = $("<small>").text(smallCopy);
+
       $("a").addClass(cssClass);
       $("body").append($info);
     }
