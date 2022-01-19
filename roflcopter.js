@@ -42,7 +42,7 @@ $(function() {
     success: function(data) {
       var conditionCode = data.weather[0].id
       conditionText = data.weather[0].description.toLowerCase(),
-      smallCopy = "Fun fact: the color of the links changes depending on the current weather in NYC (" + conditionText + ").",
+      smallCopy = "Fun fact: the link colors change with the current weather in NYC (" + conditionText + ").",
       cssClass = getClassFromWeatherCode(conditionCode),
       $info = $("<small>").text(smallCopy);
 
