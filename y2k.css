@@ -1,0 +1,40 @@
+html {
+    background-color:pink;
+    background-image: url("llamas.gif");
+    /* font-size: 2rem; */
+    font-weight:bold;
+    color:rgb(229, 128, 217);
+}
+
+h1 {
+    color: #ffffff;
+}
+.y2k {
+    display: block !important;
+}
+.y2k-header-container * {
+    display: inline;
+}
+.y2k-header-container img {
+    height: 100px;
+    width: 100px;
+}
+.marquee {
+    animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(100%, 0);
+    }
+  }
+  
+.divider {
+    display: block;
+    margin: auto;
+    width: 100%;
+    /* width: 200px;
+    height: 200px; */
+}
