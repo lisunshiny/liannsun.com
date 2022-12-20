@@ -4,6 +4,7 @@ html {
     /* font-size: 2rem; */
     font-weight:bold;
     color:rgb(229, 128, 217);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 h1 {
@@ -37,4 +38,8 @@ h1 {
     width: 100%;
     /* width: 200px;
     height: 200px; */
+}
+
+.secret-message {
+    display: none;
 }

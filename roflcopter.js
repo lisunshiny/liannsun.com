@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   // Docs @ https://openweathermap.org/current
   var weatherCodeMap = [
     [_.range(200, 300), "t"],
@@ -13,7 +13,7 @@ $(function() {
 
   function getClassFromWeatherCode(code) {
     var cssClass;
-    _.each(weatherCodeMap, function(arr) {
+    _.each(weatherCodeMap, function (arr) {
       var range = arr[0];
       var mapCode = arr[1];
 
@@ -39,15 +39,34 @@ $(function() {
       units: "imperial",
       appid: "e83b3c4c08285bf87b99f9bbc0abe3f0"
     },
-    success: function(data) {
+    success: function (data) {
       var conditionCode = data.weather[0].id
       conditionText = data.weather[0].description.toLowerCase(),
-      smallCopy = "Fun fact: the link colors change with the current weather in NYC (" + conditionText + ").",
-      cssClass = getClassFromWeatherCode(conditionCode),
-      $info = $("<small>").text(smallCopy);
+        smallCopy = "Fun fact: the link colors change with the current weather in NYC (" + conditionText + ").",
+        cssClass = getClassFromWeatherCode(conditionCode),
+        $info = $("<small>").text(smallCopy);
 
       $("a").addClass(cssClass);
-      $("body").append($info);
+      $(".weather").append($info);
     }
   });
+
+
+  // add button to change style
+  let initialTimeout = 500;
+  let delta = 500;
+  setTimeout(() => $(".secret-message").append($("<span>").text("...")), initialTimeout);
+  setTimeout(() => $(".secret-message").append($("<span>").text("...")), initialTimeout + delta * 2);
+  setTimeout(() => $(".secret-message").append($("<span>").text("psst...")), initialTimeout + delta * 4);
+  setTimeout(() => $(".secret-message").append($("<span>").text("this website is boring")), initialTimeout + delta * 6.5);
+  setTimeout(() => $(".secret-message").append($("<span>").text("=")), initialTimeout + delta * 8);
+  setTimeout(() => $(".secret-message").append($("<span>").text("==")), initialTimeout + delta * 8.25);
+  setTimeout(() => $(".secret-message").append($("<span>").text("==> ")), initialTimeout + delta * 8.5);
+  setTimeout(() => {
+    $(".secret-message").append($("<span>").addClass("y2k-click").text("click me!"));
+    $(".y2k-click").click(function () {
+      $("head").append('<link rel="stylesheet" href="y2k.css" charset="utf-8" />')
+    });
+  
+  }, initialTimeout + delta * 10);
 });
