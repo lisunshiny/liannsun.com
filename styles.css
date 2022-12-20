@@ -1,13 +1,14 @@
 html {
-  background-color: black;
-  font-family: sans-serif;
   font-weight: normal;
   font-size: 40px;
-  color: white;
 }
 
 h1 {
   font-size: 50px;
+}
+
+.y2k {
+  display: none;
 }
 
 @media only screen and (max-width: 860px) {
@@ -30,60 +31,13 @@ h1 {
   }
 }
 
-a {
-  color: white;
-  transition: color 0.2s ease;
-  text-decoration: none;
-}
-
-a:hover {
-  color: pink;
-}
-
 small {
-  display: block;
-  font-size: 10px;
+  display: none;
 }
 
-
-/* Begin weather hex classes */
-
-/* Clear */
-.c {
-  color: #F2F0A1;
-}
-
-/* Snow */
-.sn {
-  color: #D9D9D6;
-}
-
-/* Hail */
-.h {
-  color: #FFB3AB;
-}
-
-/* Thunderstorm */
-.t {
-  color: #DFA0C9;
-}
-
-/* Light rain */
-.lr {
-  color: #B4B5DF;
-}
-
-/* Showers */
-.s {
-  color: #5BC2E7;
-}
-
-/* Clouds */
-.cl {
-  color: #BEC6C4;
-}
-
-/*  ¯\_(ツ)_/¯ */
-.unk {
-  color: #a1b1f2;
+.secret-message {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: small;
 }
