@@ -26,7 +26,6 @@ MENU_ITEMS = {
 $(function () {
 
   const updateBodyText = (markdownPath) => {
-    console.log(markdownPath)
     fetch(markdownPath).then((response => {
       return response.text()
     })).then((text) => {
@@ -34,15 +33,19 @@ $(function () {
     })
   }
 
-  updateBodyText(MENU_ITEMS.recruiter.markdown_file)
+  // updateBodyText(MENU_ITEMS.recruiter.markdown_file)
 
-  $("a").click((el) => {
-    const key = $(el.target).data("bio")
+  $("#cars").change((el) => {
+    var key = $('option:selected').data("bio");
+    console.log(key);
     item = MENU_ITEMS[key]
     if (item !== undefined) {
       updateBodyText(item.markdown_file)
     }
   })
+  updateBodyText(MENU_ITEMS.recruiter.markdown_file)
+  updateBodyText(MENU_ITEMS.recruiter.markdown_file)
+
   // fetch('bios/internet_stalker.md').then((response => {
   //   return response.text()
   // })).then((text) => {
@@ -51,5 +54,4 @@ $(function () {
 
 
   // document.getElementById('content').innerHTML = "blah"
-  marked.parse('# Marked in the browser\n\nRendered by **marked**.');
 });
