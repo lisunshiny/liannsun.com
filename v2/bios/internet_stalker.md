@@ -1,6 +1,3 @@
-# I am
-the person that you are trying to go on a date with?
-
 You found me! I'll make this easy for you.
 
 ### Basics

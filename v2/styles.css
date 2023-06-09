@@ -1,3 +1,66 @@
+@font-face {
+  font-family: Space_Mono;
+  src: url(fonts/Space_Mono/SpaceMono-Regular.ttf) format("truetype");
+
+}
+
 html {
-  background: #dddddd;
+  font-family: Space_Mono;
+  /* background: #dddddd; */
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+#site-container {
+  display: flex;
+  margin-right: 4rem;
+  /* margin-top: 3rem; */
+}
+
+
+#header {
+  display: block;
+  width:100%;
+  /* position: fixed; */
+  background: white;
+  font-size: 2rem;
+  padding: 1rem;
+
+}
+
+#you-section {
+  display: inline;
+}
+
+label, .select-container {
+  display: inline;
+
+}
+select {
+  display: inline-block;
+  border-radius: .5rem;
+  border: 0;
+  background: transparent;
+  font-family: 'Space_Mono';
+  font-size: 1.5rem;
+  padding: .5rem;
+  border: 1px solid #9999;
+  box-shadow: .5rem .5rem teal;
+
+}
+#me-section {
+  display: inline;
+}
+#nav {
+  flex: .4;
+  padding: 1rem;
+
+}
+
+#content {
+  flex: 1;
+  font-size: 1rem;
 }

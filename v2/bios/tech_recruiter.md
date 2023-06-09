@@ -1,19 +1,16 @@
-# I am
-an experienced product-focused software engineer and career tech lead.
-
 You must be here to see if I am a good fit for a job. **Note that I do really like my job right now, and I am not looking for a new one...**
 
 ## tl;dr
 * I am a software engineer and (usually) a tech lead
 * I have 8 years of experience working at both small-ish VC-funded tech companies and very big tech companies
-* I live in New York
+* I live in Brooklyn, New York
 
 ## Skills I have
 
 ### Product engineering
   * I've been experimenting with large-scale tech products for 8 years, so I have good opinions on what will work and what won't without needing to test anything
   * I can PM small to medium sized features, which gives actual product managers more time to delve into long-term strategy and direction
-  * I work with designers, UX researchers, product managers, and data scientists as closely I do with other engineers
+  * I work with designers, researchers, and data scientists as closely I do with other engineers
   
 ### Tech leadership
   * I like to set up structures that let individual engineers suceed (e.g. continuous testing, speedy code reviews, incremental onboarding practices)
@@ -40,4 +37,4 @@ You must be here to see if I am a good fit for a job. **Note that I do really li
 ### P1
 * Free, healthy food
 * Natural light at my work desk
-* Reasonable amounts of PTO
+* 20+ days of PTO
