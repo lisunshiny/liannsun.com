@@ -1,7 +1,8 @@
 You must be here to see if I am a good fit for a job. **Note that I do really like my job right now, and I am not looking for a new one...**
 
-## tl;dr
+## Basics
 * I am a software engineer and (usually) a tech lead
+* I work at Google
 * I have 8 years of experience working at both small-ish VC-funded tech companies and very big tech companies
 * I live in Brooklyn, New York
 
@@ -13,7 +14,7 @@ You must be here to see if I am a good fit for a job. **Note that I do really li
   * I work with designers, researchers, and data scientists as closely I do with other engineers
   
 ### Tech leadership
-  * I like to have infrastructure that sets individual contributors up for success (e.g. continuous testing, speedy code reviews, incremental onboarding practices)
+  * I like to create infrastructure that sets individual contributors up for success (e.g. continuous testing, speedy code reviews, incremental onboarding practices)
   * It is important to me that the product we're building adheres to modern software engineering quality standards
   * I value giving accuate time estimates for how long things take, keeping cross-functional partners up to speed, and most importantly -- delivering the thing.
 

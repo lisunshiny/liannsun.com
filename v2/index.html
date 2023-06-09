@@ -7,7 +7,9 @@
   <meta name="description" content="liann sun's personal website.">
   <meta content="http://data.whicdn.com/images/61594364/large.gif" property="og:image">
   <link rel="icon" href="meow_meow.png" type="image/x-icon" />
+  
   <title>Sup</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="styles.css" charset="utf-8" />
   <link rel="stylesheet" href="darkmode.css" charset="utf-8" />
   <!-- <link rel="stylesheet" href="y2k.css" charset="utf-8" /> -->
@@ -30,16 +32,24 @@
 <body>
   <div id="site-container">
     <section id="nav">
-      <img class="me-picture" src="assets/me.png" />
-
-      <h1>Liann Sun (she/her)</h1>
-      <section class="links">
-        <h4>Links</h4>
-        <ul>
-          <li><a href="#">Linkedin</a></li>
-          <li><a href="#">GitHub</a></li>
-        </ul>
-      </section>
+      <div class="card">
+        <div class="header">
+          <span class="name">
+            <img id="me-picture" src="assets/me.png" />
+            <h1>Liann Sun (she/her)</h1>
+          </span>
+          <div class="material-symbols-outlined hamburger">
+            menu
+          </div>        </div>
+        <section class="links">
+          <!-- <h4>Links</h4> -->
+          <ul>
+            <li><a href="#">linkedin</a></li>
+            <li><a href="#">github</a></li>
+            <li><a href="mailto:lisunshiny@gmail.com">email</a></li>
+          </ul>
+        </section>
+      </div>
     </section>
     <section class="main" id="content">
       <div id="header">
@@ -47,12 +57,12 @@
           <label>You are a</label>
           <nav class="select-container">
             <select name="cars" id="cars">
-              <option class="bio-option" value="#" data-bio="null">??</option>
+              <option class="bio-option" value="#" data-bio="idk">??</option>
               <option class="bio-option" value="#" data-bio="recruiter">tech recruiter</option>
               <option class="bio-option" value="#" data-bio="networker">networker</option>
-
-              <option class="bio-option" value="#" data-bio="stalker">romantic interest</option>
+              <option class="bio-option" value="#" data-bio="romantic_interest">romantic interest</option>
               <option class="bio-option" value="#" data-bio="friend">friend</option>
+              <option class="bio-option" value="#" data-bio="stalker">internet stalker</option>
             </select>
           </nav>
         </div>

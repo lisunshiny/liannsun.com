@@ -2,10 +2,10 @@ Connect with me on LinkedIn [here](https://www.linkedin.com/in/liann-sun-217b653
 
 ## About me
 * I'm a product-focused software engineer and career tech lead
-* I've worked at Braze, Facebook/Meta, and Google
+* I've worked at Braze, Facebook/Meta, and Google (current)
 
 ## Background
-* Penn '13 (wow, that was a long time ago)
+* University of Pennsylvania '13 (oof that was a long time ago)
 * I went to a bootcamp in 2015 to learn how to code and got my first engineering job shortly after
 
 ## I am especially interested in connecting with
