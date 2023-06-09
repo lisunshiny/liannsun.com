@@ -20,6 +20,13 @@ body {
   /* margin-top: 3rem; */
 }
 
+.me-picture {
+  border-radius: 100px;
+  width: 75%;
+  margin: auto;
+  display: block;
+}
+
 
 #header {
   display: block;
@@ -27,7 +34,8 @@ body {
   /* position: fixed; */
   background: white;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 1rem 0;
+  line-height:3rem;
 
 }
 
@@ -49,18 +57,28 @@ select {
   padding: .5rem;
   border: 1px solid #9999;
   box-shadow: .5rem .5rem teal;
+  position: relative;
+  top: -.25rem;
 
 }
 #me-section {
   display: inline;
 }
+
 #nav {
   flex: .4;
   padding: 1rem;
+
+  margin: 1rem;
+  box-shadow: .5rem .5rem teal;
+  border: 1px solid #9999;
+  border-radius: .5rem;
+
 
 }
 
 #content {
   flex: 1;
   font-size: 1rem;
+  margin-left: 1rem;
 }

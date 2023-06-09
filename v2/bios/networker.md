@@ -1,18 +1,26 @@
-# I am
-Liann (she/her). Connect with me on LinkedIn [here](https://www.linkedin.com/in/liann-sun-217b653b).
+Connect with me on LinkedIn [here](https://www.linkedin.com/in/liann-sun-217b653b).
 
-## Who I am 
+## About me
+* I'm a product-focused software engineer and career tech lead
+* I've worked at Braze, Facebook/Meta, and Google
 
-* A software engineer.
-* A mid/late-career bootcamp grad! 
-* A resonably good mentor if we mesh well
+## Background
+* Penn '13 (wow, that was a long time ago)
+* I went to a bootcamp in 2015 to learn how to code and got my first engineering job shortly after
 
-## I can help with
+## I am especially interested in connecting with
+* People who belong to groups underrepresented in tech
+* Engineers who are mid-career looking for mentorship
+* Engineering directors who are looking to mentor
 
-* Battling imposter syndrome. Yes, you do know how to code.
-* Technical interview prep. I've probably conducted hundreds of these by this point...
-* Fixing your bike?
+## I can help by
+
+* Talking through career stuff
+* Recommending ways to navigate tricky situations
 
 ## You can help me by
 
+* Talking through career stuff
+* Recommending ways to navigate tricky situations
 * Telling me about in-person paid CS teaching opportunities in NYC
+* Asking me to speak at things

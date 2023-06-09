@@ -5,7 +5,7 @@ MENU_ITEMS = {
     markdown_file: "bios/internet_stalker.md",
     label: "romantic interest",
     uri_extension: "stalker",
-    title: "I am a (mostly) normal person?"
+    title: "so I am a normal person"
 
 
   },
@@ -13,20 +13,20 @@ MENU_ITEMS = {
     markdown_file: "bios/tech_recruiter.md",
     label: "tech recruiter",
     uri_extension: "recruiter",
-    title: "I am a software engineer"
+    title: "so I am a software engineer"
   },
   networker: {
     markdown_file: "bios/networker.md",
     label: "networker",
     uri_extension: "networker",
-    title: "3."
+    title: ""
 
   },
   friend: {
     markdown_file: "bios/friend.md",
     label: "friend",
     uri_extension: "friend",
-    title: "you know who I am"
+    title: "so you know who I am"
   },
 
 }
@@ -37,7 +37,7 @@ $(function () {
     fetch(item.markdown_file).then((response => {
       return response.text()
     })).then((text) => {
-      document.getElementById('content').innerHTML = marked.parse(text)
+      document.getElementById('conditional-text').innerHTML = marked.parse(text)
     })
   }
 
