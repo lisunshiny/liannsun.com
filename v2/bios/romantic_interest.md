@@ -3,7 +3,7 @@ You found me! I'll make this easy for you.
 ### Basics
 * My name is pronounced like "lee" + "anne"
 * I live in NYC
-  * ⚠️ I share a name with a Canadian with a big internet prescence -- that ain't me!! ⚠️
+  * ⚠️ I share a name with a Canadian with a big internet presence -- that ain't me!! ⚠️
 
 ### Some links from around the internet
 

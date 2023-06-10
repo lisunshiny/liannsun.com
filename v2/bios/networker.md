@@ -1,4 +1,4 @@
-Connect with me on LinkedIn [here](https://www.linkedin.com/in/liann-sun-217b653b).
+Connect with me on Linkedin [here](https://www.linkedin.com/in/liann-sun-217b653b).
 
 ## About me
 * I'm a product-focused software engineer and career tech lead

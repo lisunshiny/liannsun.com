@@ -27,6 +27,14 @@ span {
 
 p:first-child {}
 
+/* 
+h1 {
+  margin-block-end: 0;
+}
+h5 {
+  margin-block: 0;
+ */
+/* } */
 li {
   margin-bottom: .5rem;
 }
@@ -101,6 +109,11 @@ select {
   display: block;
   margin-top: 2rem;
 }
+
+.links  ul {
+  padding: .5rem 1rem;
+}
+
 #nav {}
 
 .card {
@@ -111,8 +124,8 @@ select {
   border: 1px solid #9999;
   border-radius: .5rem;
   position: fixed;
-  width: 20rem;
-  width: min-content;
+  width: 8.5rem;
+  /* width: min-content; */
   text-align: left;
 
 }
@@ -125,6 +138,10 @@ select {
 
 #expand {
   display: none;
+}
+
+.highlight {
+  background-color: yellow;
 }
 
 @media only screen and (max-width: 768px) {
@@ -149,6 +166,11 @@ select {
 
   .links {
     display: none;
+  }
+  .links ul {
+    margin: 0 2rem;
+    padding: 0; 
+
   }
 
   .card {
@@ -176,9 +198,6 @@ select {
 
   }
 
-  .highlight {
-    background: yellow;
-  }
 
   #me-picture {
     height: 4rem;
@@ -188,7 +207,7 @@ select {
 
   }
 
-  h1 {
+   {
     display: block;
     line-height: 5rem;
     height: 5rem;
