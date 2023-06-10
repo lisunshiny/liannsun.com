@@ -100,6 +100,7 @@ select {
 .hamburger {
   display: none;
 }
+
 .intro {
   margin-top: 0;
   font-weight: bolder;
@@ -110,7 +111,7 @@ select {
   margin-top: 2rem;
 }
 
-.links  ul {
+.links ul {
   padding: .5rem 1rem;
 }
 
@@ -120,7 +121,7 @@ select {
   padding: 2rem;
   margin: 2rem;
   /* box-shadow: .5rem .5rem var(--gradient-color); */
-  box-shadow: .5rem .5rem teal;
+  /* box-shadow: .5rem .5rem teal; */
   border: 1px solid #9999;
   border-radius: .5rem;
   position: fixed;
@@ -129,6 +130,58 @@ select {
   text-align: left;
 
 }
+/* crap */
+.box-card {
+  --s: 0px; /* spread-radius */
+  --x: 10px; /* X offset */
+  --y: 10px;  /* Y offset */
+  --color-1:#ffd700;
+  --color-2: #cf1261;
+  /* width: 150px;
+  height: 150px; */
+  /* border: 2px solid green; */
+  background: white;
+  border-radius: 20px;
+  transform: translate(0);
+  transform-style: preserve-3d;
+}
+.shadow-card:before {
+  content:"";
+  position: absolute;
+  inset: calc(-1*var(--s) - 2px);
+  transform: translate3d(var(--x),var(--y), -1px);
+  background: conic-gradient(from 90deg at 40% -25%, #ffd700, #f79d03, #ee6907, #e6390a, #de0d0d, #d61039, #cf1261, #c71585, #cf1261, #d61039, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
+  border-radius: inherit;
+}
+
+/* crap */
+.box {
+  --s: 10px; /* spread-radius */
+  --x: 10px; /* X offset */
+  --y: 8px;  /* Y offset */
+  --b: 10px; /* blur-radius*/
+
+  width: 150px;
+  height: 150px;
+  border: 2px solid green;
+  background: lightblue;
+  border-radius: 40px;
+  position: relative;
+  transform: translate(0);
+  transform-style: preserve-3d;
+}
+.shadow:before {
+  content:"";
+  position: absolute;
+  inset: calc(-1*var(--s) - 2px);
+  transform: translate3d(var(--x),var(--y), -1px);
+  background: conic-gradient(from 90deg at 40% -25%, #ffd700, #f79d03, #ee6907, #e6390a, #de0d0d, #d61039, #cf1261, #c71585, #cf1261, #d61039, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
+  filter: blur(--b);
+  border-radius: inherit;
+  width:154px;
+  height:154px;
+}
+/* crap end */
 
 #content {
   flex: 1;
@@ -167,9 +220,10 @@ select {
   .links {
     display: none;
   }
+
   .links ul {
     margin: 0 2rem;
-    padding: 0; 
+    padding: 0;
 
   }
 
@@ -207,7 +261,7 @@ select {
 
   }
 
-   {
+    {
     display: block;
     line-height: 5rem;
     height: 5rem;
