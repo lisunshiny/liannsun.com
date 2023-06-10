@@ -76,6 +76,15 @@ $(function () {
   $(".hamburger").click((el) => {
     $(".links").toggle()
   })
+
+  $( window ).on("resize", () => {
+    // debugger;
+    if (window.innerWidth > 768) {
+      $(".links").show()
+    } else {
+      $(".links").hide()
+    }
+  })
   // updateBodyText(MENU_ITEMS.recruiter.markdown_file)
   // updateBodyText(MENU_ITEMS.recruiter.markdown_file)
 
