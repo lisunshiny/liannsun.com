@@ -67,11 +67,14 @@ $(function () {
 
   $("#cars").change((el) => {
     var key = $('option:selected').data("bio");
-    console.log(key);
     item = MENU_ITEMS[key]
     if (item !== undefined) {
       updateSite(item)
     }
+  })
+
+  $(".hamburger").click((el) => {
+    $(".links").toggle()
   })
   // updateBodyText(MENU_ITEMS.recruiter.markdown_file)
   // updateBodyText(MENU_ITEMS.recruiter.markdown_file)
