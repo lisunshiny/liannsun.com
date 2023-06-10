@@ -66,6 +66,7 @@ $(function () {
   // updateBodyText(MENU_ITEMS.recruiter.markdown_file)
 
   $("#cars").change((el) => {
+    $(".intro").hide()
     var key = $('option:selected').data("bio");
     item = MENU_ITEMS[key]
     if (item !== undefined) {

@@ -1,4 +1,6 @@
-You must be here to see if I am a good fit for a job. **Note that I do really like my job right now, and I am not looking for a new one...**
+You must be here to see if I am a good fit for a job.
+
+ <span class="highlight">**Note that I do really like my job right now, and I am not looking for a new one...**</span>
 
 ## Basics
 * I am a software engineer and (usually) a tech lead

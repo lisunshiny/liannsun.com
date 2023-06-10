@@ -3,7 +3,7 @@ You found me! I'll make this easy for you.
 ### Basics
 * My name is pronounced like "lee" + "anne"
 * I live in NYC
-  * If you are looking for a social media influencer in Canada with the same name, you are in the wrong spot!! 
+  * ⚠️ I share a name with a Canadian with a big internet prescence -- that ain't me!! ⚠️
 
 ### Some links from around the internet
 
