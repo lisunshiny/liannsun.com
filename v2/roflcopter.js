@@ -7,8 +7,8 @@ MENU_ITEMS = {
     uri_extension: "",
     title: "",
     image_src: "assets/me.png",
-    shadow_color: "#000",
-    gradient_colors: ["#000", "#000", "#000"]
+    shadow_color: "#777",
+    gradient_colors: ["#777", "#777", "#777"]
   },
   stalker: {
     markdown_file: "bios/internet_stalker.md",
@@ -20,7 +20,6 @@ MENU_ITEMS = {
     gradient_colors: ["#D2F46B", "#85f46b", "#f4ab6b"]
 
   },
-
   romantic_interest: {
     markdown_file: "bios/romantic_interest.md",
     label: "romantic interest",
@@ -30,7 +29,6 @@ MENU_ITEMS = {
     shadow_color: "#F4AB6B",
     gradient_colors: ["#F4AB6B", "#fffb1e", "#ff0a0a"]
   },
-
   recruiter: {
     markdown_file: "bios/tech_recruiter.md",
     label: "tech recruiter",
@@ -45,7 +43,7 @@ MENU_ITEMS = {
     label: "networker",
     uri_extension: "networker",
     title: "so I am a software engineer",
-    image_src: "assets/me-selfie.png",
+    image_src: "assets/me.png",
     shadow_color: "#BC6BF4",
     gradient_colors: ["#BC6BF4", "#6b88f4", "#ff4da1"]
   },
@@ -54,7 +52,7 @@ MENU_ITEMS = {
     label: "friend",
     uri_extension: "friend",
     title: "so you know who I am",
-    image_src: "assets/me-child-2.png",
+    image_src: "assets/me-child.png",
     shadow_color: "#6BF4CD",
     gradient_colors: ["#6BF4CD", "#2eff3a", "#deff64"]
   },
@@ -67,8 +65,6 @@ $(function () {
     $('#me-picture').attr("src", item.image_src)
     $('#cars').css("box-shadow", ".5rem .5rem " + item.shadow_color)
     const boxCard = $(".box-card").get(0)
-    console.log(boxCard)
-    // debugger;/
     boxCard.style.setProperty("--color-1", item.gradient_colors[0])
     boxCard.style.setProperty("--color-2", item.gradient_colors[1])
     boxCard.style.setProperty("--color-3", item.gradient_colors[2])
@@ -78,8 +74,6 @@ $(function () {
       document.getElementById('conditional-text').innerHTML = marked.parse(text)
     })
   }
-
-  // updateBodyText(MENU_ITEMS.recruiter.markdown_file)
 
   $("#cars").change((el) => {
     $(".intro").hide()
@@ -94,7 +88,9 @@ $(function () {
     $(".links").toggle()
   })
   $("#content").click((el) => {
-    $(".links").hide()
+    if (window.innerWidth < 768) {
+      $(".links").hide()
+    }
   })
 
   $( window ).on("resize", () => {
@@ -104,15 +100,4 @@ $(function () {
       $(".links").hide()
     }
   })
-  // updateBodyText(MENU_ITEMS.recruiter.markdown_file)
-  // updateBodyText(MENU_ITEMS.recruiter.markdown_file)
-
-  // fetch('bios/internet_stalker.md').then((response => {
-  //   return response.text()
-  // })).then((text) => {
-  //   document.getElementById('content').innerHTML = marked.parse(text)
-  // })
-
-
-  // document.getElementById('content').innerHTML = "blah"
 });
