@@ -1,0 +1,43 @@
+html {
+  font-weight: normal;
+  font-size: 40px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.y2k {
+  display: none;
+}
+
+@media only screen and (max-width: 860px) {
+  body {
+    font-size: 32px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+
+small {
+  display: none;
+}
+
+.secret-message {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: small;
+}
