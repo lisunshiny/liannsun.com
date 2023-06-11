@@ -53,7 +53,7 @@ li {
 }
 
 
-#header {
+#role-container {
   display: block;
   width: 100%;
   background: white;
@@ -220,7 +220,7 @@ label,
     justify-content: space-between;
   }
 
-  #header {
+  #role-container {
     padding-top: 0;
     padding-bottom: 0;
 
