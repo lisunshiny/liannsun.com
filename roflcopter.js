@@ -68,13 +68,11 @@ $(function () {
     boxCard.style.setProperty("--color-1", item.gradient_colors[0])
     boxCard.style.setProperty("--color-2", item.gradient_colors[1])
     boxCard.style.setProperty("--color-3", item.gradient_colors[2])
-    fetch(item.markdown_file).then((response => {
-      return response.text()
-    })).then((text) => {
-      document.getElementById('conditional-text').innerHTML = marked.parse(text, {mangle: false, headerIds: false})
-    })
+    $(`.bio-text`).hide()
+    $(`#${item.key}-text`).show()
   }
-
+  
+  // controller
   if (window.location.hash !== "") {
     const windowKey = window.location.hash.slice(1)
     $(".intro").hide()
@@ -83,6 +81,15 @@ $(function () {
     window.history.pushState({ key: "idk" }, null, null );
   }
 
+  // load text into divs to toggle for later.
+  for (const key in MENU_ITEMS) {
+    item = MENU_ITEMS[key]
+    fetch(item.markdown_file).then((response => {
+      return response.text()
+    })).then((text) => {
+      document.getElementById(`${key}-text`).innerHTML = marked.parse(text, {mangle: false, headerIds: false})
+    })
+  }
 
   $("#cars").change((el) => {
     $(".intro").hide()
