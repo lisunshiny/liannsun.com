@@ -3,7 +3,7 @@
 MENU_ITEMS = {
   idk: {
     markdown_file: "bios/idk.md",
-    label: "",
+    key: "idk",
     uri_extension: "",
     title: "",
     image_src: "assets/me.png",
@@ -12,7 +12,7 @@ MENU_ITEMS = {
   },
   stalker: {
     markdown_file: "bios/internet_stalker.md",
-    label: "stalker",
+    key: "stalker",
     uri_extension: "stalker",
     title: "so umm wow you are honest",
     image_src: "assets/me-meme.png",
@@ -22,7 +22,7 @@ MENU_ITEMS = {
   },
   romantic_interest: {
     markdown_file: "bios/romantic_interest.md",
-    label: "romantic interest",
+    key: "romantic_interest",
     uri_extension: "romantic_interest",
     title: "so I am a normal person",
     image_src: "assets/me-climbing.png",
@@ -31,7 +31,7 @@ MENU_ITEMS = {
   },
   recruiter: {
     markdown_file: "bios/tech_recruiter.md",
-    label: "tech recruiter",
+    key: "recruiter",
     uri_extension: "recruiter",
     title: "so I am a software engineer",
     image_src: "assets/me.png",
@@ -40,7 +40,7 @@ MENU_ITEMS = {
   },
   networker: {
     markdown_file: "bios/networker.md",
-    label: "networker",
+    key: "networker",
     uri_extension: "networker",
     title: "so I am a software engineer",
     image_src: "assets/me.png",
@@ -49,7 +49,7 @@ MENU_ITEMS = {
   },
   friend: {
     markdown_file: "bios/friend.md",
-    label: "friend",
+    key: "friend",
     uri_extension: "friend",
     title: "so you know who I am",
     image_src: "assets/me-child.png",
@@ -59,8 +59,8 @@ MENU_ITEMS = {
 
 }
 $(function () {
-
   const updateSite = (item) => {
+    $(`[data-bio="${item.key}"]`).prop("selected", true)
     document.getElementById('me-section').innerHTML = item.title
     $('#me-picture').attr("src", item.image_src)
     $('#cars').css("box-shadow", ".5rem .5rem " + item.shadow_color)
@@ -71,33 +71,47 @@ $(function () {
     fetch(item.markdown_file).then((response => {
       return response.text()
     })).then((text) => {
-      document.getElementById('conditional-text').innerHTML = marked.parse(text)
+      document.getElementById('conditional-text').innerHTML = marked.parse(text, {mangle: false, headerIds: false})
     })
   }
+
+  if (window.location.hash !== "") {
+    const windowKey = window.location.hash.slice(1)
+    $(".intro").hide()
+    updateSite(MENU_ITEMS[windowKey])
+  } else {
+    window.history.pushState({ key: "idk" }, null, null );
+  }
+
 
   $("#cars").change((el) => {
     $(".intro").hide()
     var key = $('option:selected').data("bio");
-    item = MENU_ITEMS[key]
-    if (item !== undefined) {
-      updateSite(item)
-    }
+    window.history.pushState({ key: key, test: "test" }, null, `#${key}`);
+    updateSite(MENU_ITEMS[key])
   })
-
+  
   $(".hamburger").click((el) => {
     $(".links").toggle()
   })
+
   $("#content").click((el) => {
     if (window.innerWidth < 768) {
       $(".links").hide()
     }
   })
 
-  $( window ).on("resize", () => {
+  $(window).on("resize", () => {
     if (window.innerWidth > 768) {
       $(".links").show()
     } else {
       $(".links").hide()
     }
   })
+  window.onpopstate = function (e) {
+    var d = e.state || { data: 'no state' };
+    if (e.state.key) {
+      updateSite(MENU_ITEMS[e.state.key])
+    }
+  };
 });
