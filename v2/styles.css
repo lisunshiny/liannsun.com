@@ -87,7 +87,7 @@ label,
   font-size: 1.5rem;
   padding: .5rem;
   border: 1px solid #9999;
-  box-shadow: .5rem .5rem #9999;
+  box-shadow: .5rem .5rem #000;
   position: relative;
   top: -.25rem;
 
@@ -129,10 +129,10 @@ label,
 .box-card {
   --s: 0px; /* spread-radius */
   --x: .5rem; /* X offset */
-  --y: .5rem;  /* Y offset */
-  --color-1: #ffd700;
-  --color-2: #cf1261;
-  --color-3: #437a90;
+  --y: .5rem;  /* Y offses */
+  --color-1: #000;
+  --color-2: #000;
+  --color-3: #000;
 
   background: white;
   border-radius: 20px;
@@ -176,7 +176,15 @@ label,
 
 
   }
+  .box-card {
+    --s: 0px;
+    --x: 0;
+    --y: 0px;
+  }
 
+  .shadow-card:before {
+    background: conic-gradient(from 268deg at 55% 19%, var(--color-1), var(--color-2), var(--color-3));
+  }
   #expand img {
     width: 4rem;
     height: 4rem;
@@ -200,6 +208,7 @@ label,
     width: calc(100%);
     border-radius: 0;
     box-shadow: none;
+    border: 0;
   }
 
   .name {

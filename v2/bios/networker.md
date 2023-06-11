@@ -24,3 +24,4 @@ Connect with me on Linkedin [here](https://www.linkedin.com/in/liann-sun-217b653
 * Recommending ways to navigate tricky situations
 * Telling me about in-person paid CS teaching opportunities in NYC
 * Asking me to speak at things
+* Letting me know if you'd like to see a blog post about how I made this site!
