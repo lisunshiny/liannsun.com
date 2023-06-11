@@ -7,9 +7,10 @@ You found me! I'll make this easy for you.
 
 ### Some links from around the internet
 
-* 🍌 [instagram](https://www.instagram.com/bananasinthewild/)
-* 👟 [strava](https://www.strava.com/athletes/17786212)
-* 🖤 [myspace account](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+* 🍌 <a href="https://www.instagram.com/bananasinthewild/" target="_blank">instagram</a>
+* 👟 <a href="https://www.strava.com/athletes/17786212" target="_blank">strava</a>
+* 🖤 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">myspace account</a>
+
 ### My hobbies
 * climbing
 * biking
