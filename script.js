@@ -8,7 +8,7 @@ MENU_ITEMS = {
     title: "",
     image_src: "assets/me.png",
     shadow_color: "#777",
-    gradient_colors: ["#777", "#777", "#777"]
+    gradient_colors: ["#fff", "#aaa", "#555"]
   },
   stalker: {
     markdown_file: "bios/internet_stalker.md",
@@ -94,7 +94,7 @@ $(function () {
   $("#cars").change((el) => {
     $(".intro").hide()
     var key = $('option:selected').data("bio");
-    window.history.pushState({ key: key, test: "test" }, null, `#${key}`);
+    window.history.pushState({ key: key, test: "test" }, null, `#${MENU_ITEMS[key]["uri_extension"]}`);
     updateSite(MENU_ITEMS[key])
   })
   

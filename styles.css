@@ -43,6 +43,7 @@ li {
   /* display: flex; */
   margin-right: 4rem;
   /* margin-top: 3rem; */
+  /* padding-bottom: 6rem; */
 }
 
 #me-picture {
@@ -79,6 +80,7 @@ label,
 }
 
 #cars {
+  all: unset;
   display: inline-block;
   border-radius: .5rem;
   border: 0;
@@ -86,13 +88,28 @@ label,
   font-family: 'Space_Mono';
   font-size: 1.5rem;
   padding: .5rem;
-  border: 1px solid #9999;
+  border: 1px solid #999;
   box-shadow: .5rem .5rem #777;
   position: relative;
   top: -.25rem;
-
+  padding-right: 3rem;
 }
+.select-container {
+  position: relative;
+}
+.select-container:after {
+  height: 5rem;
+  line-height: 5rem;
+  color: #999;
+  content: "▾";
+  position: absolute;
+  font-size: 1.7rem;
+  right: 2rem;
+  pointer-events: none; 
 
+  /* top: .4rem; */
+  
+}
 #me-section {
   display: inline;
 }
@@ -102,8 +119,9 @@ label,
 }
 
 .intro {
+  font-size: 1.25rem;
+  line-height: 2.5rem;
   margin-top: 0;
-  font-weight: bolder;
 }
 
 .disclaimer {
@@ -120,19 +138,22 @@ label,
 .card {
   padding: 2rem;
   margin: 2rem;
-  border: 1px solid #9999;
+  border: 1px solid #999;
   position: fixed;
   width: 8.5rem;
   text-align: left;
 }
-
+.home-link {
+  all: unset;
+  cursor: pointer;
+}
 .box-card {
   --s: 0px; /* spread-radius */
   --x: .5rem; /* X offset */
   --y: .5rem;  /* Y offses */
-  --color-1: #777;
-  --color-2: #777;
-  --color-3: #777;
+  --color-1: #fff;
+  --color-2: #aaa;
+  --color-3: #555;
 
   background: white;
   border-radius: 20px;
@@ -264,5 +285,4 @@ label,
     padding-right: 1rem;
     margin-left: 0;
   }
-
 }
