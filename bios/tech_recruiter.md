@@ -1,6 +1,6 @@
 You must be here to see if I am a good fit for a job.
 
- <span class="highlight">**Note that I do really like my job right now, and I am not looking for a new one...**</span>
+ <span class="highlight">Note that I do really like my job right now, and I am not looking for a new one...</span>
 
 ## Basics
 * I am a software engineer and (usually) a tech lead
@@ -24,7 +24,7 @@ You must be here to see if I am a good fit for a job.
   * I make time to write code, specifically, clean, well-tested code with minimal review comments
   * I am good at debugging weird, wonky things -- and knowing when it's not worth sinking any more time into debugging the weird, wonky thing, no matter how interesting it is
 
-# What I'm interested in
+## What I'm interested in
 * Staff+ engineering manager or TL roles at medium to large tech companies
 * Being the first tech hire at a small company
 * ???
