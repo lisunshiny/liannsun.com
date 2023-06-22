@@ -17,8 +17,8 @@ MENU_ITEMS = {
     title: "so umm wow you are honest",
     image_src: "assets/me-meme.png",
     shadow_color: "#D2F46B",
-    gradient_colors: ["#D2F46B", "#85f46b", "#f4ab6b"]
-
+    gradient_colors: ["#D2F46B", "#85f46b", "#f4ab6b"],
+    starts_with_verb: true
   },
   romantic_interest: {
     markdown_file: "bios/romantic_interest.md",
@@ -64,6 +64,11 @@ $(function () {
     document.getElementById('me-section').innerHTML = item.title
     $('#me-picture').attr("src", item.image_src)
     $('#cars').css("box-shadow", ".5rem .5rem " + item.shadow_color)
+    if (item.starts_with_verb) {
+      $('.label-a').text("an")
+    } else {
+      $('.label-a').text("a");
+    }
     const boxCard = $(".box-card").get(0)
     boxCard.style.setProperty("--color-1", item.gradient_colors[0])
     boxCard.style.setProperty("--color-2", item.gradient_colors[1])
