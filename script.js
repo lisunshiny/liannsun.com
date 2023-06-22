@@ -71,24 +71,26 @@ $(function () {
     $(`.bio-text`).hide()
     $(`#${item.key}-text`).show()
   }
-  
+
   // controller
   if (window.location.hash !== "") {
     const windowKey = window.location.hash.slice(1)
     $(".intro").hide()
     updateSite(MENU_ITEMS[windowKey])
   } else {
-    window.history.pushState({ key: "idk" }, null, null );
+    window.history.pushState({ key: "idk" }, null, null);
   }
 
-  // load text into divs to toggle for later.
+  // load text into divs to toggle for later and preload images.
   for (const key in MENU_ITEMS) {
     item = MENU_ITEMS[key]
     fetch(item.markdown_file).then((response => {
       return response.text()
     })).then((text) => {
-      document.getElementById(`${key}-text`).innerHTML = marked.parse(text, {mangle: false, headerIds: false})
+      document.getElementById(`${key}-text`).innerHTML = marked.parse(text, { mangle: false, headerIds: false })
     })
+    const img = new Image();
+    img.src = item.image_src
   }
 
   $("#cars").change((el) => {
@@ -97,7 +99,7 @@ $(function () {
     window.history.pushState({ key: key, test: "test" }, null, `#${MENU_ITEMS[key]["uri_extension"]}`);
     updateSite(MENU_ITEMS[key])
   })
-  
+
   $(".hamburger").click((el) => {
     $(".links").toggle()
   })

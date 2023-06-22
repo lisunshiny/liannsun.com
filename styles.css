@@ -79,6 +79,10 @@ label,
   margin-bottom: 5rem;
 }
 
+.bio-text > h3 {
+  font-weight: normal;
+  margin-top: 2.5rem;
+}
 #cars {
   all: unset;
   display: inline-block;
