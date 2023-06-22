@@ -53,7 +53,6 @@ li {
   display: block;
 }
 
-
 #role-container {
   display: block;
   width: 100%;
@@ -79,10 +78,11 @@ label,
   margin-bottom: 5rem;
 }
 
-.bio-text > h3 {
+.bio-text>h3 {
   font-weight: normal;
   margin-top: 2.5rem;
 }
+
 #cars {
   all: unset;
   display: inline-block;
@@ -98,9 +98,11 @@ label,
   top: -.25rem;
   padding-right: 3rem;
 }
+
 .select-container {
   position: relative;
 }
+
 .select-container:after {
   height: 5rem;
   line-height: 5rem;
@@ -109,11 +111,12 @@ label,
   position: absolute;
   font-size: 1.7rem;
   right: 2rem;
-  pointer-events: none; 
+  pointer-events: none;
 
   /* top: .4rem; */
-  
+
 }
+
 #me-section {
   display: inline;
 }
@@ -147,14 +150,19 @@ label,
   width: 8.5rem;
   text-align: left;
 }
+
 .home-link {
   all: unset;
   cursor: pointer;
 }
+
 .box-card {
-  --s: 0px; /* spread-radius */
-  --x: .5rem; /* X offset */
-  --y: .5rem;  /* Y offses */
+  --s: 0px;
+  /* spread-radius */
+  --x: .5rem;
+  /* X offset */
+  --y: .5rem;
+  /* Y offses */
   --color-1: #fff;
   --color-2: #aaa;
   --color-3: #555;
@@ -164,11 +172,12 @@ label,
   transform: translate(0);
   transform-style: preserve-3d;
 }
+
 .shadow-card:before {
-  content:"";
+  content: "";
   position: absolute;
   inset: calc(-1*var(--s) - 2px);
-  transform: translate3d(var(--x),var(--y), -1px);
+  transform: translate3d(var(--x), var(--y), -1px);
   background: conic-gradient(from -45deg at 71% 84%, var(--color-1), var(--color-2), var(--color-3));
   border-radius: inherit;
 }
@@ -201,6 +210,7 @@ label,
 
 
   }
+
   .box-card {
     --s: 0px;
     --x: 0;
@@ -210,6 +220,7 @@ label,
   .shadow-card:before {
     background: conic-gradient(from 268deg at 55% 19%, var(--color-1), var(--color-2), var(--color-3));
   }
+
   #expand img {
     width: 4rem;
     height: 4rem;
@@ -260,7 +271,7 @@ label,
 
   }
 
-   h1 {
+  h1 {
     display: block;
     line-height: 5rem;
     height: 5rem;
@@ -288,5 +299,37 @@ label,
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  html,
+  #content,
+  #role-container,
+  .box-card,
+  .card {
+    background: rgb(28, 28, 28);
+    color: white;
+  }
+
+  a {
+    color: rgb(182, 234, 255)
+  }
+
+  a:visited {
+    color: rgb(243, 182, 255)
+  }
+
+  .home-link {
+    color: white !important;
+  }
+
+  .highlight {
+    color: black;
+  }
+
+  #cars, .card {
+    border-color: #fff;
   }
 }
