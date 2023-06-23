@@ -21,9 +21,6 @@ You found me! I'll make this easy for you.
 * yoga
 * making lists
 
-### You should know that
-* I don't take myself very seriously, if you haven't noticed 🤷🏻‍♀️
-
 ### What I like to make
 * food
 * bicycles
