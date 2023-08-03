@@ -4,6 +4,7 @@ You found me! I'll make this easy for you.
 * My name is pronounced like "lee" + "anne"
 * I live in NYC
   * ⚠️ I share a name with a Canadian with a big internet presence -- that ain't me!! ⚠️
+* I work in tech (as you may have noticed), but please don't ask me about C++ on our first date... or ever
 
 ### Some links from around the internet
 

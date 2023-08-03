@@ -6,8 +6,8 @@ MENU_ITEMS = {
     key: "idk",
     uri_extension: "",
     title: "",
-    image_src: "assets/me.png",
-    shadow_color: "#777",
+    image_src: "assets/transparent.png",
+    shadow_color: "#a7a7a7",
     gradient_colors: ["#fff", "#aaa", "#555"]
   },
   stalker: {
@@ -34,7 +34,7 @@ MENU_ITEMS = {
     key: "recruiter",
     uri_extension: "recruiter",
     title: "so I am a software engineer",
-    image_src: "assets/me.png",
+    image_src: "assets/transparent.png",
     shadow_color: "#6B95F4",
     gradient_colors: ["#6B95F4", "#75edcb", "#f5aaed"]
   },
@@ -43,7 +43,7 @@ MENU_ITEMS = {
     key: "networker",
     uri_extension: "networker",
     title: "so I am a software engineer",
-    image_src: "assets/me.png",
+    image_src: "assets/transparent.png",
     shadow_color: "#BC6BF4",
     gradient_colors: ["#BC6BF4", "#6b88f4", "#ff4da1"]
   },
@@ -63,6 +63,8 @@ $(function () {
     $(`[data-bio="${item.key}"]`).prop("selected", true)
     document.getElementById('me-section').innerHTML = item.title
     $('#me-picture').attr("src", item.image_src)
+    $('#me-picture').css("background-color", item.shadow_color)
+
     $('#cars').css("box-shadow", ".5rem .5rem " + item.shadow_color)
     if (item.starts_with_verb) {
       $('.label-a').text("an")
@@ -78,11 +80,11 @@ $(function () {
   }
 
   // controller
-  if (window.location.hash !== "") {
-    const windowKey = window.location.hash.slice(1)
-    $(".intro").hide()
+  const windowKey = window.location.hash.slice(1)
+  if (window.location.hash !== "" && MENU_ITEMS[windowKey]) {
     updateSite(MENU_ITEMS[windowKey])
   } else {
+    updateSite(MENU_ITEMS["idk"])
     window.history.pushState({ key: "idk" }, null, null);
   }
 
@@ -99,7 +101,6 @@ $(function () {
   }
 
   $("#cars").change((el) => {
-    $(".intro").hide()
     var key = $('option:selected').data("bio");
     window.history.pushState({ key: key, test: "test" }, null, `#${MENU_ITEMS[key]["uri_extension"]}`);
     updateSite(MENU_ITEMS[key])
@@ -124,7 +125,7 @@ $(function () {
   })
   window.onpopstate = function (e) {
     var d = e.state || { data: 'no state' };
-    if (e.state.key) {
+    if (e.state.key &&  MENU_ITEMS[e.state.key]) {
       updateSite(MENU_ITEMS[e.state.key])
     }
   };
