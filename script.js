@@ -80,8 +80,8 @@ $(function () {
   }
 
   // controller
-  const windowKey = window.location.hash.slice(1)
-  if (window.location.hash !== "" && MENU_ITEMS[windowKey]) {
+  const windowKey = window.location.search.slice(1)
+  if (windowKey !== "" && MENU_ITEMS[windowKey]) {
     updateSite(MENU_ITEMS[windowKey])
   } else {
     updateSite(MENU_ITEMS["idk"])
@@ -102,7 +102,7 @@ $(function () {
 
   $("#cars").change((el) => {
     var key = $('option:selected').data("bio");
-    window.history.pushState({ key: key, test: "test" }, null, `#${MENU_ITEMS[key]["uri_extension"]}`);
+    window.history.pushState({ key: key, test: "test" }, null, `?${MENU_ITEMS[key]["uri_extension"]}`);
     updateSite(MENU_ITEMS[key])
   })
 
