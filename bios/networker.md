@@ -3,6 +3,7 @@ Connect with me on Linkedin [here](https://www.linkedin.com/in/liann-sun-217b653
 ### About me
 * I'm a product-focused software engineer and career tech lead
 * I've worked at Braze, Facebook/Meta, and Google (current)
+* I did a 6 month pro-bono civic tech project for the Bay Area via a [Google.org fellowship](https://blog.google/outreach-initiatives/google-org/googleorg-fellowship/)
 
 ### Background
 * University of Pennsylvania '13 (oof that was a long time ago)

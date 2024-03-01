@@ -18,12 +18,13 @@ You found me! I'll make this easy for you.
 * traveling
 * hiking and long-distance backpacking
 * board gaming
+* puzzle solving
 * yoga
-* making lists
 
 ### What I like to make
 * food
 * bicycles
+* lists
 * silly websites
   * e.g. the easter egg I built into the <a href="/old" target="_blank">last version of this site</a>
 * mechanical keyboards
