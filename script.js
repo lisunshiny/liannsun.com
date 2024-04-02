@@ -20,15 +20,6 @@ MENU_ITEMS = {
     gradient_colors: ["#D2F46B", "#85f46b", "#f4ab6b"],
     starts_with_verb: true
   },
-  romantic_interest: {
-    markdown_file: "bios/romantic_interest.md",
-    key: "romantic_interest",
-    uri_extension: "romantic_interest",
-    title: "so I am a normal person",
-    image_src: "assets/me-climbing.png",
-    shadow_color: "#F4AB6B",
-    gradient_colors: ["#F4AB6B", "#fffb1e", "#ff0a0a"]
-  },
   recruiter: {
     markdown_file: "bios/tech_recruiter.md",
     key: "recruiter",
