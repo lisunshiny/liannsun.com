@@ -23,6 +23,6 @@ Connect with me on Linkedin [here](https://www.linkedin.com/in/liann-sun-217b653
 
 * Talking through career stuff
 * Recommending ways to navigate tricky situations
-* Telling me about in-person paid CS teaching opportunities in NYC
+* Telling me about in-person paid CS teaching opportunities in the Bay Area
 * Asking me to speak at things
 * Letting me know if you'd like to see a blog post about how I made this site!
