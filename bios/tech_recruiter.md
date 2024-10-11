@@ -6,7 +6,7 @@ You must be here to see if I am a good fit for a job.
 * I am a software engineer and (usually) a tech lead
 * I work at Google
 * I have 8 years of experience working at both small-ish VC-funded tech companies and very big tech companies
-* I live in Brooklyn, New York
+* I live in the Bay Area
 
 ### Skills I have
 
@@ -32,7 +32,7 @@ You must be here to see if I am a good fit for a job.
 ### What I'm looking for
 
 #### P0
-* A physical office in NYC with some semblance of in-office culture
+* A physical office with some semblance of in-office culture
 * Smart, respectful coworkers
 * At least one women and/or other underrepresented community represented both in my engineering management chain *and* my level, or a very very good explanation for why this isn't possible
   * Fun fact: *My team at Google passes this test with flying colors!*
