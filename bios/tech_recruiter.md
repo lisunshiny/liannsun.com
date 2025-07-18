@@ -13,7 +13,7 @@ You must be here to see if I am a good fit for a job.
 #### Product engineering
   * I've been experimenting with large-scale tech products for 8 years, so I have good opinions on what will work and what won't without needing to test anything
   * I can PM small to medium sized features, which gives actual product managers more time to delve into long-term strategy and direction
-  * I work with designers, researchers, and data scientists as closely I do with other engineers
+  * I work with designers, researchers, and data scientists as closely as I do with other engineers
   
 #### Tech leadership
   * I like to create infrastructure that sets individual contributors up for success (e.g. continuous testing, speedy code reviews, incremental onboarding practices)
@@ -34,7 +34,7 @@ You must be here to see if I am a good fit for a job.
 #### P0
 * A physical office with some semblance of in-office culture
 * Smart, respectful coworkers
-* At least one women and/or other underrepresented community represented both in my engineering management chain *and* my level, or a very very good explanation for why this isn't possible
+* At least one woman and/or other underrepresented community represented both in my engineering management chain *and* my level, or a very very good explanation for why this isn't possible
   * Fun fact: *My team at Google passes this test with flying colors!*
 
 #### P1
