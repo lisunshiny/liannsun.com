@@ -156,6 +156,10 @@ label,
   cursor: pointer;
 }
 
+.pronouns {
+  font-size: .6em;
+}
+
 .box-card {
   --s: 0px;
   /* spread-radius */

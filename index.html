@@ -1,86 +1,119 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Liann is an Oakland based human who works as a software engineer"
+    />
+    <meta content="/assets/transparent.png" property="og:image" />
+    <link rel="icon" href="/assets/me-climbing.png" type="image/x-icon" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Liann is an Oakland based human who works as a software engineer" />
-  <meta content="/assets/transparent.png" property="og:image">
-  <link rel="icon" href="/assets/me-climbing.png" type="image/x-icon" />
+    <title>Liann Sun (she/her), NYC</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="styles.css" charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-  <title>Liann Sun (she/her), NYC</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="styles.css" charset="utf-8" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZNYWY3H78N"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <script type="text/javascript" src="script.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNYWY3H78N"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "G-ZNYWY3H78N");
+    </script>
+  </head>
 
-    gtag('config', 'G-ZNYWY3H78N');
-  </script>
-</head>
-
-<body>
-  <div id="site-container">
-    <section id="nav">
-      <div class="card box-card shadow-card">
-        <div class="header">
-          <span class="name">
-            <img id="me-picture" src="assets/transparent.png" />
-            <h1>
-              <a class="home-link" href="/">Liann Sun (she/her)</a>
-            </h1>
-          </span>
-          <div class="material-symbols-outlined hamburger">
-            menu
+  <body>
+    <div id="site-container">
+      <section id="nav">
+        <div class="card box-card shadow-card">
+          <div class="header">
+            <span class="name">
+              <img id="me-picture" src="assets/transparent.png" />
+              <h1>
+                <a class="home-link" href="/"
+                  >Liann Sun <span class="pronouns">(she/her)</span></a
+                >
+              </h1>
+            </span>
+            <div class="material-symbols-outlined hamburger">menu</div>
           </div>
+          <section class="links">
+            <!-- <h4>Links</h4> -->
+            <ul>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/liann-sun-217b653b/"
+                  target="_blank"
+                  >linkedin</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/lisunshiny" target="_blank"
+                  >github</a
+                >
+              </li>
+              <li><a href="mailto:lisunshiny@gmail.com">email</a></li>
+            </ul>
+          </section>
         </div>
-        <section class="links">
-          <!-- <h4>Links</h4> -->
-          <ul>
-            <li><a href="https://www.linkedin.com/in/liann-sun-217b653b/" target="_blank">linkedin</a></li>
-            <li><a href="https://github.com/lisunshiny" target="_blank">github</a></li>
-            <li><a href="mailto:lisunshiny@gmail.com">email</a></li>
-          </ul>
-        </section>
-      </div>
-    </section>
-    <section class="main" id="content">
-      <div id="role-container">
-        <div id="you-section">
-
-          <label>You are <span class="label-a">a</span></label>
-          <nav class="select-container">
-            <select name="cars" id="cars" class="">
-              <option class="bio-option" value="#" data-bio="idk">??</option>
-              <option class="bio-option" value="#" data-bio="recruiter">tech recruiter</option>
-              <option class="bio-option" value="#" data-bio="networker">networker</option>
-              <option class="bio-option" value="#" data-bio="romantic_interest">romantic interest</option>
-              <option class="bio-option" value="#" data-bio="friend">friend</option>
-              <option class="bio-option" value="#" data-bio="stalker">internet stalker</option>
-            </select>
-          </nav>
+      </section>
+      <section class="main" id="content">
+        <div id="role-container">
+          <div id="you-section">
+            <label>You are <span class="label-a">a</span></label>
+            <nav class="select-container">
+              <select name="cars" id="cars" class="">
+                <option class="bio-option" value="#" data-bio="idk">??</option>
+                <option class="bio-option" value="#" data-bio="recruiter">
+                  tech recruiter
+                </option>
+                <option class="bio-option" value="#" data-bio="networker">
+                  networker
+                </option>
+                <option
+                  class="bio-option"
+                  value="#"
+                  data-bio="romantic_interest"
+                >
+                  romantic interest
+                </option>
+                <option class="bio-option" value="#" data-bio="friend">
+                  friend
+                </option>
+                <option class="bio-option" value="#" data-bio="stalker">
+                  internet stalker
+                </option>
+              </select>
+            </nav>
+          </div>
+          <div id="me-section"></div>
         </div>
-        <div id="me-section">
-        </div>
-      </div>
-      <div class="bio-text" id="idk-text" style="display: none;"></div>
-      <div class="bio-text" id="recruiter-text" style="display: none;"></div>
-      <div class="bio-text" id="networker-text" style="display: none;"></div>
-      <div class="bio-text" id="romantic_interest-text" style="display: none;"></div>
-      <div class="bio-text" id="friend-text" style="display: none;"></div>
-      <div class="bio-text" id="stalker-text" style="display: none;"></div>
-    </section>
-
+        <div class="bio-text" id="idk-text" style="display: none"></div>
+        <div class="bio-text" id="recruiter-text" style="display: none"></div>
+        <div class="bio-text" id="networker-text" style="display: none"></div>
+        <div
+          class="bio-text"
+          id="romantic_interest-text"
+          style="display: none"
+        ></div>
+        <div class="bio-text" id="friend-text" style="display: none"></div>
+        <div class="bio-text" id="stalker-text" style="display: none"></div>
+      </section>
     </div>
-</body>
-
+  </body>
 </html>
