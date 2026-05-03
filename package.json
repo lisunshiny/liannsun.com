@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "blog": "npm run dev --prefix blog"
+  }
+}

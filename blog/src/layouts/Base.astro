@@ -1,0 +1,164 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  backHref?: string;
+  backLabel?: string;
+}
+const { title, description, backHref = '/blog', backLabel = '← blog' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {description && <meta name="description" content={description} />}
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+    />
+    <style is:global>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --fg: #111;
+        --bg: #fff;
+        --muted: #888;
+        --border: #e0e0e0;
+        --code-bg: #f4f4f4;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fg: #d4d4d4;
+          --bg: #111;
+          --muted: #888;
+          --border: #2a2a2a;
+          --code-bg: #1e1e1e;
+        }
+      }
+
+      body {
+        font-family: 'Space Mono', monospace;
+        background: var(--bg);
+        color: var(--fg);
+        margin: 0 auto;
+        max-width: 680px;
+        padding: 3.5rem 1.5rem 6rem;
+        line-height: 1.6;
+        letter-spacing: 0.005em;
+      }
+
+      a {
+        color: var(--fg);
+      }
+
+      a:hover {
+        opacity: 0.6;
+      }
+
+      .back-link {
+        font-size: 0.85rem;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 3.5rem;
+        color: var(--muted);
+      }
+
+      .tag {
+        font-size: 0.7rem;
+        border: 1px solid currentColor;
+        padding: 0.1em 0.45em;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .tag:hover {
+        opacity: 0.6;
+      }
+
+      h2 a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+
+      /* prose styles for rendered markdown content */
+      .prose p {
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+      }
+
+      .prose h2 {
+        font-size: 1rem;
+        font-weight: normal;
+        margin-top: 2.5rem;
+        margin-bottom: 0.75rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .prose h3 {
+        font-size: 0.9rem;
+        font-weight: normal;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .prose ul,
+      .prose ol {
+        padding-left: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+      }
+
+      .prose li {
+        margin-bottom: 0.2rem;
+      }
+
+      .prose code {
+        font-family: 'Space Mono', monospace;
+        font-size: 0.85em;
+        background: var(--code-bg);
+        padding: 0.1em 0.35em;
+      }
+
+      .prose pre {
+        background: var(--code-bg);
+        padding: 1rem;
+        overflow-x: auto;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+      }
+
+      .prose pre code {
+        background: none;
+        padding: 0;
+      }
+
+      .prose blockquote {
+        margin: 0 0 1.25rem;
+        padding-left: 1rem;
+        border-left: 2px solid var(--border);
+        color: var(--muted);
+      }
+
+      .prose img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .prose a {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="back-link" href={backHref}>{backLabel}</a>
+    <slot />
+  </body>
+</html>

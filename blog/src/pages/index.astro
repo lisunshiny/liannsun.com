@@ -1,0 +1,68 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+const FEED_SIZE = 5;
+
+const allPosts = (await getCollection('posts')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const feedPosts = await Promise.all(
+  allPosts.slice(0, FEED_SIZE).map(async (post) => ({
+    post,
+    Content: (await render(post)).Content,
+  }))
+);
+
+const allTags = [...new Set(allPosts.flatMap((p) => p.data.tags))].sort();
+const base = import.meta.env.BASE_URL;
+---
+<Base title="blog — liann sun" backHref="/" backLabel="← liannsun.com">
+  <h1 style="margin-top: 0; margin-bottom: 0.75rem;">Liann Sun - blog</h1>
+  <p style="color: var(--muted); font-size: 0.85rem; margin-top: 0; margin-bottom: 3rem;">a place for me to write about things i do and make. all opinions are my own</p>
+  {allTags.length > 0 && (
+    <div style="margin-bottom: 3.5rem; display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+      <span style="color: var(--muted); font-size: 0.75rem; margin-right: 0.25rem;">tags</span>
+      {allTags.map((tag) => (
+        <a href={`${base}/tags/${tag}`} class="tag">#{tag}</a>
+      ))}
+    </div>
+  )}
+
+  {feedPosts.map(({ post, Content }, i) => (
+    <article style={`padding-bottom: 2.5rem; margin-bottom: 2.5rem;${i < feedPosts.length - 1 ? ' border-bottom: 1px solid var(--border);' : ''}`}>
+      <h2 style="margin-top: 0; margin-bottom: 0.25rem; font-size: 1.25rem;">
+        <a href={`${base}/posts/${post.id}`} style="text-decoration: none;">{post.data.title}</a>
+      </h2>
+      <div style="color: var(--muted); font-size: 0.85rem; margin-bottom: 1.25rem; display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+        <span>{post.data.date.toISOString().slice(0, 10)}</span>
+        {post.data.tags.map((tag) => (
+          <a href={`${base}/tags/${tag}`} class="tag">#{tag}</a>
+        ))}
+      </div>
+      <div class="prose"><Content /></div>
+    </article>
+  ))}
+
+  {allPosts.length > 0 && (
+    <section style="margin-top: 1rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+      <p style="color: var(--muted); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 1.25rem;">all posts</p>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        {allPosts.map((post) => (
+          <li style="display: flex; align-items: baseline; gap: 1.25rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border);">
+            <span style="color: var(--muted); font-size: 0.85rem; white-space: nowrap; flex-shrink: 0;">
+              {post.data.date.toISOString().slice(0, 10)}
+            </span>
+            <span>
+              <a href={`${base}/posts/${post.id}`}>{post.data.title}</a>
+              {post.data.tags.map((tag) => (
+                <a href={`${base}/tags/${tag}`} class="tag" style="margin-left: 0.5rem;">#{tag}</a>
+              ))}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+</Base>
