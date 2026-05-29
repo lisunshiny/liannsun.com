@@ -14,6 +14,13 @@ const { title, description, backHref = '/blog', backLabel = '← blog' } = Astro
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {description && <meta name="description" content={description} />}
     <title>{title}</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNYWY3H78N"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZNYWY3H78N');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="stylesheet"
