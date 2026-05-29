@@ -35,8 +35,8 @@ jobs:
       - name: Assemble site
         run: |
           mkdir -p _site/blog
-          cp index.html styles.css script.js CNAME _site/
-          cp -r assets bios fonts _site/
+          cp index.html CNAME _site/
+          cp -r old _site/
           cp -r blog/dist/. _site/blog/
 
       - uses: actions/upload-pages-artifact@v3
