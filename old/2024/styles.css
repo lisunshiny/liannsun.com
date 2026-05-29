@@ -1,22 +1,39 @@
-@font-face {
-  font-family: Space_Mono;
-  src: url(fonts/Space_Mono/SpaceMono-Regular.ttf) format("truetype");
-
-}
-
 :root {
   --gradient-color: linear-gradient(to bottom right, red, yellow);
+  --banner-height: 35px;
+}
+
+.archived-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: red;
+  color: white;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 8px 1rem;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 html {
-  font-family: Space_Mono;
+  font-family: 'Space Mono', monospace;
   margin: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
 }
 
 
 body {
   margin: 0;
   letter-spacing: .005em;
+  padding-top: var(--banner-height);
 }
 
 
@@ -89,7 +106,7 @@ label,
   border-radius: .5rem;
   border: 0;
   background: transparent;
-  font-family: 'Space_Mono';
+  font-family: 'Space Mono', monospace;
   font-size: 1.5rem;
   padding: .5rem;
   border: 1px solid #999;
@@ -147,6 +164,7 @@ label,
   margin: 2rem;
   border: 1px solid #999;
   position: fixed;
+  top: var(--banner-height);
   width: 8.5rem;
   text-align: left;
 }
@@ -245,6 +263,7 @@ label,
     background: white;
     z-index: 100;
     margin: 0;
+    top: var(--banner-height);
     width: calc(100%);
     border-radius: 0;
     box-shadow: none;

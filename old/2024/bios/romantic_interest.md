@@ -26,6 +26,6 @@ You found me! I'll make this easy for you.
 * bicycles
 * lists
 * silly websites
-  * e.g. the easter egg I built into the <a href="/old" target="_blank">last version of this site</a>
+  * e.g. the easter egg I built into the <a href="/old/2016/" target="_blank">last version of this site</a>
 * mechanical keyboards
 * friends
