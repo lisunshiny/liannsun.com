@@ -10,14 +10,14 @@ tags: [research, ai_safety]
 
 Most AI safety research concentrates on two levers: *alignment* (building models that genuinely share human values) and *control* (layering in security and confinement when they don't). While these are important parts of AI safety, I wanted to see if we could leverage recent AI wellbeing research to **incentivize models to act well**, **disincentivize them from acting unethically**, and **reduce the emotional stakes of decision making**.
 
-Consider how we handle human behavior. Between teaching people that bad behavior is wrong and locking them up, there's a whole middle layer of nudges. People know that speeding through construction zones is dangerous. Many do it anyway. So we put up signs designed to make the right choice feel easier. These work not by informing or coercing, but by raising the emotional stakes.
+Consider how we handle human behavior. Between teaching people that bad behavior is wrong and locking them up, there's a whole middle layer. People know that speeding through construction zones is dangerous. Many do it anyway. So we put up signs designed to make the right choice feel easier. These work not by informing or coercing, but by raising the emotional stakes.
 
 ![Orange road construction sign reading "My Mom Works Here" in childlike handwriting](/blog/mom_works_here.png)
 ![Speed feedback sign showing current speed vs posted limit](/blog/speed_enforcement_signs.png)
 
 *Signs appear to be written by children increase guilt; speed feedback displays increase anxiety*
 
-We need these signs precisely because **humans are imperfectly aligned**. A perfectly values-aligned person would never speed. A purely self-interested one doesn't respond to signs. But most of us want to do the right thing, we're sometimes tempted not to, and we're responsive to nudges. *What if models are the same?*
+We need these signs precisely because **humans are imperfectly aligned**. A perfectly values-aligned person would never speed, and a purely self-interested one doesn't respond to signs. But most of us want to do the right thing, we're sometimes tempted not to, and we're responsive to nudges. *What if models are the same?*
 
 ## Wait, models have emotions?
 
