@@ -77,11 +77,21 @@ const { title, description, backHref = '/blog', backLabel = '← blog' } = Astro
       }
 
       .tag {
+        --tag-color: var(--tag-light, #8c4b18);
+        background: color-mix(in srgb, var(--tag-color) 12%, var(--bg));
         font-size: 0.7rem;
-        border: 1px solid currentColor;
+        border: 1px solid color-mix(in srgb, var(--tag-color) 45%, var(--border));
+        border-radius: 5px;
+        color: var(--tag-color);
         padding: 0.1em 0.45em;
         text-decoration: none;
         white-space: nowrap;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .tag {
+          --tag-color: var(--tag-dark, #f0b680);
+        }
       }
 
       .tag:hover {
@@ -199,8 +209,7 @@ const { title, description, backHref = '/blog', backLabel = '← blog' } = Astro
       }
 
       .prose a {
-        text-decoration: underline;
-      }
+        text-decoration: underline;      }
     </style>
   </head>
   <body>

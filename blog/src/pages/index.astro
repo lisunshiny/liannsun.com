@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
+import { tagColorStyle } from '../lib/tag-colors';
 
 const FEED_SIZE = 5;
 
@@ -20,16 +21,16 @@ const base = import.meta.env.BASE_URL;
 ---
 <Base title="blog — liann sun" backHref="/" backLabel="← liannsun.com">
   <h1 style="margin-top: 0; margin-bottom: 0.75rem;">Liann Sun - blog</h1>
-  <p style="color: var(--muted); font-size: 0.85rem; margin-top: 0; margin-bottom: 3rem;">a place for me to write about things i do and make. all opinions are my own</p>
-  <hr class="page-divider" />
+  <p style="color: var(--muted); font-size: 0.85rem; margin-top: 0;">a place for me to write about things i do and make. all opinions are my own</p>
   {allTags.length > 0 && (
-    <div style="margin-bottom: 3.5rem; display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+    <div style="margin-bottom: 2.5rem; display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
       <span style="color: var(--muted); font-size: 0.75rem; margin-right: 0.25rem;">tags</span>
       {allTags.map((tag) => (
-        <a href={`${base}/tags/${tag}`} class="tag">#{tag}</a>
+        <a href={`${base}/tags/${tag}`} class="tag" style={tagColorStyle(tag)}>#{tag}</a>
       ))}
     </div>
   )}
+  <hr class="page-divider" />
 
   {feedPosts.map(({ post, Content }, i) => (
     <article style={`padding-bottom: 2.5rem; margin-bottom: 2.5rem;${i < feedPosts.length - 1 ? ' border-bottom: 1px solid var(--border);' : ''}`}>
@@ -39,7 +40,7 @@ const base = import.meta.env.BASE_URL;
       <div style="color: var(--muted); font-size: 0.85rem; margin-bottom: 1.25rem; display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
         <span>{post.data.date.toISOString().slice(0, 10)}</span>
         {post.data.tags.map((tag) => (
-          <a href={`${base}/tags/${tag}`} class="tag">#{tag}</a>
+          <a href={`${base}/tags/${tag}`} class="tag" style={tagColorStyle(tag)}>#{tag}</a>
         ))}
       </div>
       <div class="prose"><Content /></div>
@@ -58,7 +59,7 @@ const base = import.meta.env.BASE_URL;
             <span>
               <a href={`${base}/posts/${post.id}`}>{post.data.title}</a>
               {post.data.tags.map((tag) => (
-                <a href={`${base}/tags/${tag}`} class="tag" style="margin-left: 0.5rem;">#{tag}</a>
+                <a href={`${base}/tags/${tag}`} class="tag" style={`${tagColorStyle(tag)} margin-left: 0.5rem;`}>#{tag}</a>
               ))}
             </span>
           </li>

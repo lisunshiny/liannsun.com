@@ -7,13 +7,15 @@ tags: [making]
 ~1.5 years ago, with no sewing experience, I went down a rabbit hole to build
 myself a new “do everything” weekday backpack.
 
-1+ year and 5 tries later, I think I finally did it.
+1+ year and ~5 tries later, I think I finally did it.
 
 <img
   src="/blog/bag-spin-video-slower.gif"
   alt=""
   style="width: 40%; height: auto;"
 />
+
+*My new daily driver*
 
 ## About my backpack needs
 
@@ -29,8 +31,7 @@ has to go into the backpack, a grocery bag won’t cut it.
 
 Interestingly, while this sounds like a lot of stuff, **I usually don’t need
 more than 12L on a daily basis**, so I like to carry small bags that can turn
-into big bags when I need them to. I’m also 5 '5, so 25L bags make me look
-like I’m about to go on a thru-hike.
+into big bags when I need them to. I’m also 5'5, so 25L bags look huge on me.
 
 I found the [Ultimate Direction Fastpack 15][fastpack] many years ago and it’s
 mostly perfect, although it’s gotten increasingly raggedy over the years.
@@ -43,7 +44,7 @@ to work, even though my coworkers are incredibly gracious about it.
 
 *I’ve loved this bag to death over the past ~8 years*
 
-## How I got there
+## Why I became an amateur bag maker
 
 I wasn’t necessarily attached to making a bag at first. I tried to buy another
 Fastpack 15, but it was discontinued. I considered one of UD’s newer bags,

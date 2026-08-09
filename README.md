@@ -4,22 +4,27 @@ Personal site. The main page is vanilla HTML/CSS/JS. The blog is an [Astro](http
 
 ## Running locally
 
-**Main site** — just open `index.html` in a browser, or use any static file server:
+### Blog
+
+The blog needs Astro's development server. From the repository root, run:
 
 ```sh
-npx serve .
-```
-
-**Blog** — runs a dev server at `http://localhost:4321/blog`:
-
-```sh
+npm install
 npm run blog
 ```
 
-First time only, install dependencies:
+Then open [http://127.0.0.1:4321/blog/](http://127.0.0.1:4321/blog/).
+
+Do not use a generic static file server for the blog's source directory; it
+will show a folder listing instead of rendering the Astro site.
+
+### Main site
+
+The main site is static HTML/CSS/JS. Open `index.html` directly, or serve the
+repository root with any static file server:
 
 ```sh
-npm install --prefix blog
+npx serve .
 ```
 
 ## Writing a blog post

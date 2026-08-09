@@ -1,5 +1,10 @@
 {
+  "private": true,
+  "workspaces": [
+    "blog"
+  ],
   "scripts": {
-    "blog": "npm run dev --prefix blog"
+    "blog": "npm run dev --workspace=blog",
+    "build": "npm run build --workspace=blog"
   }
 }
