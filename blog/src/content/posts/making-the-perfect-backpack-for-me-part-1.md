@@ -52,7 +52,7 @@ but they’re for ultrarunning and the Fastpack 15’s laptop carrying
 capability was a happy accident, not a conscious feature. I also wanted to
 be able to find something that could carry a climbing rope.
 
-I started looking in the alpine/fastpacking world since I knew they had
+I started looking in the alpine/fastpacking world since I knew those bags had
 ropes in mind, but they also didn’t carry a laptop well, which is the #1 most
 important feature for me. And commuter bags that can carry a laptop
 aren’t light or able to double in size on a whim.
