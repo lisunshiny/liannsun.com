@@ -24,7 +24,7 @@ const { title, description, backHref = '/blog', backLabel = '← blog' } = Astro
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400;1,9..40,700&display=swap"
     />
     <style is:global>
       * {
@@ -50,7 +50,7 @@ const { title, description, backHref = '/blog', backLabel = '← blog' } = Astro
       }
 
       body {
-        font-family: 'Space Mono', monospace;
+        font-family: 'DM Sans', sans-serif;
         background: var(--bg);
         color: var(--fg);
         margin: 0 auto;
@@ -86,6 +86,12 @@ const { title, description, backHref = '/blog', backLabel = '← blog' } = Astro
 
       .tag:hover {
         opacity: 0.6;
+      }
+
+      .page-divider {
+        border: 0;
+        border-top: 1px solid var(--border);
+        margin: 0 0 2.5rem;
       }
 
       h2 a:hover {
@@ -126,7 +132,7 @@ const { title, description, backHref = '/blog', backLabel = '← blog' } = Astro
       }
 
       .prose code {
-        font-family: 'Space Mono', monospace;
+        font-family: 'DM Sans', sans-serif;
         font-size: 0.85em;
         background: var(--code-bg);
         padding: 0.1em 0.35em;
